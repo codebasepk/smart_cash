@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_forum) {
             startActivity(new Intent(this, ReceiptActivity.class));
         } else if (id == R.id.nav_support) {
-
+            startActivity(new Intent(this, TransactionAmountActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

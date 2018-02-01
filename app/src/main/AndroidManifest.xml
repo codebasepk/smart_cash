@@ -31,7 +31,13 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".CardInformation" />
         <activity android:name=".PinActivity" />
-        <activity android:name=".ReceiptActivity"></activity>
+        <activity android:name=".ReceiptActivity" />
+
+        <activity
+            android:name=".TransactionAmountActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+
+        </activity>
     </application>
 
 </manifest>
