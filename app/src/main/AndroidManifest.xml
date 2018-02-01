@@ -27,9 +27,11 @@
         </activity>
         <activity
             android:name=".QrActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".CardInformation"></activity>
+        <activity android:name=".CardInformation" />
+        <activity android:name=".PinActivity" />
+        <activity android:name=".ReceiptActivity"></activity>
     </application>
 
 </manifest>

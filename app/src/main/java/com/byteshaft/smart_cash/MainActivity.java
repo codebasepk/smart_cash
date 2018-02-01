@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_wallet) {
             startActivity(new Intent(this, CardInformation.class));
         } else if (id == R.id.nav_notification) {
-
+            startActivity(new Intent(this, PinActivity.class));
         } else if (id == R.id.nav_forum) {
-
+            startActivity(new Intent(this, ReceiptActivity.class));
         } else if (id == R.id.nav_support) {
 
         }
