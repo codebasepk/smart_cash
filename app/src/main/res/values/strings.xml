@@ -7,4 +7,5 @@
     <string name="thank_you_for_shopping_at">Thank you for shopping at</string>
     <string name="splash_screen_statement">Aaccusamus et iusto odio dignissimos ducimus qui blanditiis praesentiu.</string>
     <string name="point_of_sale">Point of Sale</string>
+    <string name="welcome_msg">Welcome to the <b>SmartCash POS</b>.\nPlease scan your Cashier card to start.</string>
 </resources>

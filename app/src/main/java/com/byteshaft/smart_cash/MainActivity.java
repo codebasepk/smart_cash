@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, QrActivity.class));
             // Handle the camera action
         } else if (id == R.id.nav_wallet) {
-
+            startActivity(new Intent(this, CardInformation.class));
         } else if (id == R.id.nav_notification) {
 
         } else if (id == R.id.nav_forum) {

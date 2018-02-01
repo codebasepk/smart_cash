@@ -7,13 +7,15 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class QrActivity extends AppCompatActivity {
 
-    private ZXingScannerView scannerView;
+    private ZXingScannerView mScannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mScannerView = new ZXingScannerView(this);
         setContentView(R.layout.activity_qr);
-        scannerView = findViewById(R.id.scanner_view);
-        scannerView.startCamera();
+
+        mScannerView = findViewById(R.id.scanner_view);
+        mScannerView.startCamera(0);
     }
 }
