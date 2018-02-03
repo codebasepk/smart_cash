@@ -33,9 +33,7 @@
         <activity android:name=".PinActivity" />
         <activity android:name=".ReceiptActivity" />
 
-        <activity
-            android:name=".TransactionAmountActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar">
+        <activity android:name=".TransactionAmountActivity">
 
         </activity>
     </application>

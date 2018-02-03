@@ -41,7 +41,7 @@
             <LinearLayout
                 android:id="@+id/layout_approved"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="170dp"
                 android:layout_below="@+id/title_layout"
                 android:gravity="center"
                 android:orientation="vertical">

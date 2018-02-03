@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<me.dm7.barcodescanner.zxing.ZXingScannerView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scanner_view"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="@android:color/white"
+        app:borderWidth="4dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,9 +18,12 @@
 
 
         <android.support.v7.widget.CardView
+            android:id="@+id/information_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="3dp">
+            android:layout_margin="8dp"
+            android:elevation="3dp"
+            app:cardElevation="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -22,10 +33,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:padding="10dp">
+                    app:cardCornerRadius="0dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -37,6 +45,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
                             android:background="@drawable/ic_arrow_back"
                             android:padding="4dp" />
 
@@ -44,21 +53,45 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_margin="16dp"
                             android:layout_toRightOf="@+id/back_button"
-                            android:orientation="horizontal"
-                            android:padding="4dp"
+                            android:orientation="vertical"
                             android:weightSum="2">
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Thank you for shopping at" />
+                                    android:fontFamily="sans-serif"
+                                    android:lineSpacingExtra="3sp"
+                                    android:text="Thank you for shopping at"
+                                    android:textColor="#333c4e"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="right"
+                                    android:lineSpacingExtra="3sp"
+                                    android:text="12:04:33"
+                                    android:textColor="#333c4e"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -69,29 +102,12 @@
                                     android:textColor="#333c4e"
                                     android:textSize="14sp"
                                     android:textStyle="normal" />
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="right"
-                                android:orientation="vertical">
 
                                 <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="sans-serif"
-                                    android:lineSpacingExtra="3sp"
-                                    android:text="12:04:33"
-                                    android:textColor="#333c4e"
-                                    android:textSize="13sp"
-                                    android:textStyle="normal" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="sans-serif-medium"
+                                    android:gravity="right"
                                     android:text="23 january 2017"
                                     android:textColor="#333c4e"
                                     android:textSize="14sp"
@@ -99,18 +115,15 @@
 
                                     />
                             </LinearLayout>
+
                         </LinearLayout>
                     </RelativeLayout>
-
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-
-                    android:padding="10dp">
+                    app:cardCornerRadius="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -173,8 +186,37 @@
 
                 </android.support.v7.widget.CardView>
             </LinearLayout>
-
         </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/qrCodeCardScannerSpinner"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:lineSpacingExtra="8sp"
+                android:text="Point at code to scan"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="6sp"
+                android:text="mos ducimus qui blanditiis praesentium"
+                android:textColor="#bfc7d1"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/qrCodeCardScannerSpinner"
@@ -183,9 +225,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="25dp" />
+            android:layout_marginBottom="25dp"
+            android:visibility="invisible" />
     </RelativeLayout>
 
-
-</me.dm7.barcodescanner.zxing.ZXingScannerView>
-
+</FrameLayout>

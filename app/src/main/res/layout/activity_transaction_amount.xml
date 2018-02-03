@@ -1,186 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.byteshaft.smart_cash.TransactionAmountActivity">
+    android:fillViewport="true">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/amount_card"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="14dp">
+        android:layout_height="match_parent"
+        tools:context="com.byteshaft.smart_cash.TransactionAmountActivity">
 
-        <RelativeLayout
+        <android.support.v7.widget.CardView
+            android:id="@+id/amount_card"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="@mipmap/nav_bg_image">
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Enter sale amount"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="16dp"
-                android:fontFamily="sans-serif-light"
-                android:letterSpacing="-0.02"
-                android:text="AUD"
-                android:textColor="#ffffff"
-                android:textSize="30sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif"
-                android:gravity="end"
-                android:letterSpacing="-0.02"
-                android:text="450.00"
-                android:textColor="#ffffff"
-                android:textSize="40sp"
-                android:textStyle="normal" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <TextView
-        android:id="@+id/tv_payment_method"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/amount_card"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-medium"
-        android:lineSpacingExtra="10sp"
-        android:text="Select your method of payment"
-        android:textColor="#666d7b"
-        android:textSize="14sp"
-        android:textStyle="normal" />
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_payment_method"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        app:cardElevation="20dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/card_qr"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginBottom="1dp"
+                android:layout_height="160dp"
+                android:background="@mipmap/nav_bg_image">
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Enter sale amount"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif-light"
+                        android:letterSpacing="-0.02"
+                        android:text="AUD"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:singleLine="true"
+                        android:text="450.00"
+                        android:textColor="#ffffff"
+                        android:textSize="35sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount_card"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="10sp"
+            android:text="Select your method of payment"
+            android:textColor="#666d7b"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_payment_method"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RelativeLayout
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_qr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp">
+                    android:layout_marginBottom="1dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="0dp">
 
-                    <ImageView
-                        android:id="@+id/img_qr"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:background="@mipmap/qrcode" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@+id/img_qr"
-                        android:fontFamily="sans-serif-medium"
-                        android:lineSpacingExtra="10sp"
-                        android:text="QR Code"
-                        android:textColor="#666d7b"
-                        android:textSize="14sp"
-                        android:textStyle="normal" />
+                        android:padding="16dp">
 
-                    <ImageView
-                        android:id="@+id/img_next"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:background="@mipmap/chevron_right" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:id="@+id/img_qr"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@mipmap/qrcode" />
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/card_smart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/card_qr">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/img_qr"
+                            android:fontFamily="sans-serif-medium"
+                            android:lineSpacingExtra="10sp"
+                            android:text="QR Code"
+                            android:textColor="#666d7b"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
 
-                <RelativeLayout
+                        <ImageView
+                            android:id="@+id/img_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/chevron_right" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_smart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:padding="16dp">
+                    android:layout_below="@+id/card_qr"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="0dp">
 
-                    <ImageView
-                        android:id="@+id/img_card"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:background="@mipmap/ic_card" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@+id/img_card"
-                        android:fontFamily="sans-serif-medium"
-                        android:lineSpacingExtra="10sp"
-                        android:text="Card number"
-                        android:textColor="#666d7b"
-                        android:textSize="14sp"
-                        android:textStyle="normal" />
+                        android:layout_marginTop="2dp"
+                        android:padding="16dp">
 
-                    <ImageView
-                        android:id="@+id/img_next_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:background="@mipmap/chevron_right" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:id="@+id/img_card"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@mipmap/ic_card" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_payment_method"
-        android:layout_alignStart="@+id/tv_payment_method"
-        android:layout_below="@+id/card_layout"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/by_continuing_you_agree_to_the_payments_terms_of_service_and_privacy_notice"
-        android:textColor="#aaaaaa"
-        android:textSize="12sp"
-        android:textStyle="normal" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/img_card"
+                            android:fontFamily="sans-serif-medium"
+                            android:lineSpacingExtra="10sp"
+                            android:text="Card number"
+                            android:textColor="#666d7b"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
 
-</RelativeLayout>
+                        <ImageView
+                            android:id="@+id/img_next_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/chevron_right" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_payment_method"
+            android:layout_alignStart="@+id/tv_payment_method"
+            android:layout_below="@+id/card_layout"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/by_continuing_you_agree_to_the_payments_terms_of_service_and_privacy_notice"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+</ScrollView>

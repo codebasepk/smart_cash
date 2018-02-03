@@ -1,203 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.byteshaft.smart_cash.CardInformation">
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.byteshaft.smart_cash.CardInformation">
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/information_card"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="3dp"
-        app:cardElevation="20dp">
+        <android.support.v7.widget.CardView
+            android:id="@+id/information_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="3dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="#f4b517">
+
+                        <ImageButton
+                            android:id="@+id/back_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/ic_arrow_back"
+                            android:padding="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="16dp"
+                            android:layout_toRightOf="@+id/back_button"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:lineSpacingExtra="3sp"
+                                    android:text="Thank you for shopping at"
+                                    android:textColor="#333c4e"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="right"
+                                    android:lineSpacingExtra="3sp"
+                                    android:text="12:04:33"
+                                    android:textColor="#333c4e"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:lineSpacingExtra="10sp"
+                                    android:text="JB-Hifi"
+                                    android:textColor="#333c4e"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="right"
+                                    android:text="23 january 2017"
+                                    android:textColor="#333c4e"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="#303E46"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="450.00"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="28sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="AUD"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/amount"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@mipmap/compare_arrow" />
+
+                            <TextView
+                                android:id="@+id/smart_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center_horizontal"
+                                android:text="565.88790 SMART"
+                                android:textColor="#7f8fa4"
+                                android:textSize="13sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/information_card"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RelativeLayout
+                <EditText
+                    android:id="@+id/card_info"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:background="#f4b517">
+                    android:layout_height="wrap_content"
+                    android:hint="Card Number"
+                    android:inputType="number" />
 
-                    <ImageButton
-                        android:id="@+id/back_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/ic_arrow_back"
-                        android:padding="4dp" />
+            </android.support.design.widget.TextInputLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_toRightOf="@+id/back_button"
-                        android:orientation="horizontal"
-                        android:padding="4dp"
-                        android:weightSum="2">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Thank you for shopping at" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
-                                android:lineSpacingExtra="10sp"
-                                android:text="JB-Hifi"
-                                android:textColor="#333c4e"
-                                android:textSize="14sp"
-                                android:textStyle="normal" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif"
-                                android:lineSpacingExtra="3sp"
-                                android:text="12:04:33"
-                                android:textColor="#333c4e"
-                                android:textSize="13sp"
-                                android:textStyle="normal" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
-                                android:text="23 january 2017"
-                                android:textColor="#333c4e"
-                                android:textSize="14sp"
-                                android:textStyle="normal"
-
-                                />
-                        </LinearLayout>
-                    </LinearLayout>
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:background="#303E46"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/amount"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="450.00"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="28sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:gravity="center"
-                            android:text="AUD"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/amount"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center">
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:background="@mipmap/compare_arrow" />
-
-                        <TextView
-                            android:id="@+id/smart_amount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center_horizontal"
-                            android:text="565.88790 SMART"
-                            android:textColor="#7f8fa4"
-                            android:textSize="13sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/information_card"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/card_info"
-                android:inputType="number"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/button_pay_now"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:hint="Card Number" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/button_pay_now"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="PAY NOW"
-            android:theme="@style/AppTheme.Button" />
-    </LinearLayout>
-
-</RelativeLayout>
+                android:layout_marginTop="30dp"
+                android:text="PAY NOW"
+                android:theme="@style/AppTheme.Button" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
